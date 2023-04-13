@@ -1,10 +1,10 @@
-package br.com.alura.linguagens.api;
+package br.com.alura.languages.api;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "principaisLinguagens")
-public class Linguagem {
+@Document(collection = "mostPopularLanguages")
+public class Language {
 
     @Id
     private String id;
@@ -32,7 +32,7 @@ public class Linguagem {
         return ranking;
     }
 
-    public Linguagem(String id, String title, String image, int ranking) {
+    public Language(String id, String title, String image, int ranking) {
         this.id = id;
         this.title = title;
         this.image = image;
