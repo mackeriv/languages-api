@@ -32,7 +32,7 @@ public class LanguageController {
     }
 
     @PutMapping("/languages/{id}")
-    public Language updateLinguagem(@PathVariable String id, @RequestBody Language language) {
+    public Language updateLanguage(@PathVariable String id, @RequestBody Language language) {
         if (!repository.existsById(id)){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
